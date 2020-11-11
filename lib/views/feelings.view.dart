@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 
-class Feelings extends StatelessWidget {
-  const Feelings({Key key}) : super(key: key);
+class Feelings extends StatefulWidget {
+  Feelings({Key key}) : super(key: key);
 
   @override
+  _FeelingsState createState() => _FeelingsState();
+}
+
+class _FeelingsState extends State<Feelings> {
+  @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: SizedBox(
-        width: MediaQuery.of(context).size.width,
-        height: MediaQuery.of(context).size.height,
-      ),
-    );
+    return Container(child: Column());
   }
 }

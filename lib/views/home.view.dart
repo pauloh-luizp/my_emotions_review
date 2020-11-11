@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'feelings.view.dart';
+
 class HomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -20,10 +22,14 @@ class HomeView extends StatelessWidget {
               height: 20,
             ),
             RaisedButton(
-              onPressed: () {},
               child: Text('Oi Clotilde!'),
               color: Colors.orange,
               textColor: Colors.white,
+              onPressed: () {
+                Navigator.of(context).pushReplacement(
+                  MaterialPageRoute(builder: (context) => Feelings()),
+                );
+              },
             )
           ],
         ),
