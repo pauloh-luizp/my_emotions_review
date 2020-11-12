@@ -23,7 +23,7 @@ class HomeView extends StatelessWidget {
             ),
             RaisedButton(
               child: Text('Oi Clotilde!'),
-              color: Colors.orange,
+              color: Colors.orange[800],
               textColor: Colors.white,
               onPressed: () {
                 Navigator.of(context).pushReplacement(

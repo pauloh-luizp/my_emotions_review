@@ -10,6 +10,12 @@ class Feelings extends StatefulWidget {
 class _FeelingsState extends State<Feelings> {
   @override
   Widget build(BuildContext context) {
-    return Container(child: Column());
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('My Emotions Review'),
+        centerTitle: true,
+        backgroundColor: Colors.orange[800],
+      ),
+    );
   }
 }
