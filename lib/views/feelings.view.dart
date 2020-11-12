@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:my_emotions_review/views/positiveFeelings.view.dart';
+import 'package:my_emotions_review/views/neutralFeelings.view.dart';
+import 'package:my_emotions_review/views/negativeFeelings.view.dart';
 
 class Feelings extends StatefulWidget {
   Feelings({Key key}) : super(key: key);
@@ -28,6 +31,9 @@ class _FeelingsState extends State<Feelings> {
               value: "Muito Feliz",
               groupValue: currentFeeling,
               onChanged: (String valor) {
+                Navigator.of(context).push(
+                  MaterialPageRoute(builder: (context) => PositiveFeelings()),
+                );
                 setState(() {
                   currentFeeling = valor;
                 });
@@ -40,6 +46,9 @@ class _FeelingsState extends State<Feelings> {
               value: "Feliz",
               groupValue: currentFeeling,
               onChanged: (String valor) {
+                Navigator.of(context).push(
+                  MaterialPageRoute(builder: (context) => PositiveFeelings()),
+                );
                 setState(() {
                   currentFeeling = valor;
                 });
@@ -52,6 +61,9 @@ class _FeelingsState extends State<Feelings> {
               value: "Neutro",
               groupValue: currentFeeling,
               onChanged: (String valor) {
+                Navigator.of(context).push(
+                  MaterialPageRoute(builder: (context) => NeutralFeelings()),
+                );
                 setState(() {
                   currentFeeling = valor;
                 });
@@ -64,6 +76,9 @@ class _FeelingsState extends State<Feelings> {
               value: "Triste",
               groupValue: currentFeeling,
               onChanged: (String valor) {
+                Navigator.of(context).push(
+                  MaterialPageRoute(builder: (context) => NegativeFeelings()),
+                );
                 setState(() {
                   currentFeeling = valor;
                 });
@@ -76,6 +91,9 @@ class _FeelingsState extends State<Feelings> {
               value: "Muito Triste",
               groupValue: currentFeeling,
               onChanged: (String valor) {
+                Navigator.of(context).push(
+                  MaterialPageRoute(builder: (context) => NegativeFeelings()),
+                );
                 setState(() {
                   currentFeeling = valor;
                 });
