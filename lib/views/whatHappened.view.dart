@@ -23,29 +23,44 @@ class _WhatHappenedState extends State<WhatHappened> {
       body: Scrollbar(
         child: Column(
           children: [
+            SizedBox(
+              height: 20,
+            ),
             TextFormField(
               controller: _whatHappened,
               keyboardType: TextInputType.text,
               decoration: InputDecoration(
+                border: const OutlineInputBorder(),
                 labelText: "O que aconteceu?",
-                labelStyle: TextStyle(color: Colors.orange[800]),
+                labelStyle: TextStyle(color: Colors.orange[800], fontSize: 24),
               ),
+              maxLines: 4,
+            ),
+            SizedBox(
+              height: 20,
             ),
             TextFormField(
               controller: _thoughtOfDoing,
               keyboardType: TextInputType.text,
               decoration: InputDecoration(
-                labelText: "O que aconteceu?",
-                labelStyle: TextStyle(color: Colors.orange[800]),
+                border: const OutlineInputBorder(),
+                labelText: "O que você pensou em fazer?",
+                labelStyle: TextStyle(color: Colors.orange[800], fontSize: 24),
               ),
+              maxLines: 4,
+            ),
+            SizedBox(
+              height: 20,
             ),
             TextFormField(
               controller: _whatDid,
               keyboardType: TextInputType.text,
               decoration: InputDecoration(
-                labelText: "O que aconteceu?",
-                labelStyle: TextStyle(color: Colors.orange[800]),
+                border: const OutlineInputBorder(),
+                labelText: "O que você fez?",
+                labelStyle: TextStyle(color: Colors.orange[800], fontSize: 24),
               ),
+              maxLines: 4,
             ),
           ],
         ),

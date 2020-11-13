@@ -110,7 +110,7 @@ class _NegativeFeelingsState extends State<NegativeFeelings> {
                 },
               ),
               RaisedButton(
-                child: Text('Estou me sentido assim'),
+                child: Text('Estou me sentido assim', style: TextStyle(fontSize: 24)),
                 color: Colors.orange[800],
                 textColor: Colors.white,
                 onPressed: () {

@@ -22,7 +22,7 @@ class HomeView extends StatelessWidget {
               height: 20,
             ),
             RaisedButton(
-              child: Text('Oi Clotilde!'),
+              child: Text('Oi Clotilde!', style: TextStyle(fontSize: 24)),
               color: Colors.orange[800],
               textColor: Colors.white,
               onPressed: () {
