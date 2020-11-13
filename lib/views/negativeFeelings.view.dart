@@ -72,7 +72,7 @@ class _NegativeFeelingsState extends State<NegativeFeelings> {
                 },
               ),
               CheckboxListTile(
-                title: const Text('desespero'),
+                title: const Text('Desespero'),
                 value: false,
                 activeColor: Colors.red[700],
                 onChanged: (bool valor) {
