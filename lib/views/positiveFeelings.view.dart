@@ -8,7 +8,12 @@ class PositiveFeelings extends StatefulWidget {
 }
 
 class _PositiveFeelingsState extends State<PositiveFeelings> {
-  bool positive;
+  bool felicidade = false;
+  bool humor = false;
+  bool alegria = false;
+  bool amor = false;
+  bool gratidao = false;
+  bool esperanca = false;
 
   @override
   Widget build(BuildContext context) {
@@ -23,61 +28,61 @@ class _PositiveFeelingsState extends State<PositiveFeelings> {
           children: [
             CheckboxListTile(
               title: const Text('Felicidade'),
-              value: false,
+              value: felicidade,
               activeColor: Colors.lightGreen,
               onChanged: (bool valor) {
                 setState(() {
-                  positive = valor;
+                  felicidade = valor;
                 });
               },
             ),
             CheckboxListTile(
               title: const Text('Humor'),
-              value: false,
+              value: humor,
               activeColor: Colors.lightGreen,
-              onChanged: (bool valor) {
+              onChanged: (valor) {
                 setState(() {
-                  positive = valor;
+                  humor = valor;
                 });
               },
             ),
             CheckboxListTile(
               title: const Text('Alegria'),
-              value: false,
+              value: alegria,
               activeColor: Colors.lightGreen,
-              onChanged: (bool valor) {
+              onChanged: (valor) {
                 setState(() {
-                  positive = valor;
+                  alegria = valor;
                 });
               },
             ),
             CheckboxListTile(
               title: const Text('Amor'),
-              value: false,
+              value: amor,
               activeColor: Colors.lightGreen,
-              onChanged: (bool valor) {
+              onChanged: (valor) {
                 setState(() {
-                  positive = valor;
+                  amor = valor;
                 });
               },
             ),
             CheckboxListTile(
               title: const Text('Gratidão'),
-              value: false,
+              value: gratidao,
               activeColor: Colors.lightGreen,
-              onChanged: (bool valor) {
+              onChanged: (valor) {
                 setState(() {
-                  positive = valor;
+                  gratidao = valor;
                 });
               },
             ),
             CheckboxListTile(
               title: const Text('Esperança'),
-              value: false,
+              value: esperanca,
               activeColor: Colors.lightGreen,
-              onChanged: (bool valor) {
+              onChanged: (valor) {
                 setState(() {
-                  positive = valor;
+                  esperanca = valor;
                 });
               },
             ),

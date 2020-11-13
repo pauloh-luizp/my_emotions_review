@@ -8,7 +8,14 @@ class NegativeFeelings extends StatefulWidget {
 }
 
 class _NegativeFeelingsState extends State<NegativeFeelings> {
-  bool negative;
+  bool tristeza = false;
+  bool medo = false;
+  bool hostilidade = false;
+  bool frustacao = false;
+  bool raiva = false;
+  bool desespero = false;
+  bool culpa = false;
+  bool ciumes = false;
 
   @override
   Widget build(BuildContext context) {
@@ -23,81 +30,81 @@ class _NegativeFeelingsState extends State<NegativeFeelings> {
             children: [
               CheckboxListTile(
                 title: const Text('Tristeza'),
-                value: false,
+                value: tristeza,
                 activeColor: Colors.red[700],
                 onChanged: (bool valor) {
                   setState(() {
-                    negative = valor;
+                    tristeza = valor;
                   });
                 },
               ),
               CheckboxListTile(
                 title: const Text('Medo'),
-                value: false,
+                value: medo,
                 activeColor: Colors.red[700],
                 onChanged: (bool valor) {
                   setState(() {
-                    negative = valor;
+                    medo = valor;
                   });
                 },
               ),
               CheckboxListTile(
                 title: const Text('Hostilidade'),
-                value: false,
+                value: hostilidade,
                 activeColor: Colors.red[700],
                 onChanged: (bool valor) {
                   setState(() {
-                    negative = valor;
+                    hostilidade = valor;
                   });
                 },
               ),
               CheckboxListTile(
                 title: const Text('Frustação'),
-                value: false,
+                value: frustacao,
                 activeColor: Colors.red[700],
                 onChanged: (bool valor) {
                   setState(() {
-                    negative = valor;
+                    frustacao = valor;
                   });
                 },
               ),
               CheckboxListTile(
                 title: const Text('Raiva'),
-                value: false,
+                value: raiva,
                 activeColor: Colors.red[700],
                 onChanged: (bool valor) {
                   setState(() {
-                    negative = valor;
+                    raiva = valor;
                   });
                 },
               ),
               CheckboxListTile(
                 title: const Text('Desespero'),
-                value: false,
+                value: desespero,
                 activeColor: Colors.red[700],
                 onChanged: (bool valor) {
                   setState(() {
-                    negative = valor;
+                    desespero = valor;
                   });
                 },
               ),
               CheckboxListTile(
                 title: const Text('Culpa'),
-                value: false,
+                value: culpa,
                 activeColor: Colors.red[700],
                 onChanged: (bool valor) {
                   setState(() {
-                    negative = valor;
+                    culpa = valor;
                   });
                 },
               ),
               CheckboxListTile(
                 title: const Text('Ciumes'),
-                value: false,
+                value: ciumes,
                 activeColor: Colors.red[700],
                 onChanged: (bool valor) {
                   setState(() {
-                    negative = valor;
+                    ciumes = valor;
                   });
                 },
               ),

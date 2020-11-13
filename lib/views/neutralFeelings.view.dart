@@ -8,7 +8,8 @@ class NeutralFeelings extends StatefulWidget {
 }
 
 class _NeutralFeelingsState extends State<NeutralFeelings> {
-  bool neutral;
+  bool compaixao = false;
+  bool surpresa = false;
 
   @override
   Widget build(BuildContext context) {
@@ -23,21 +24,21 @@ class _NeutralFeelingsState extends State<NeutralFeelings> {
           children: [
             CheckboxListTile(
               title: const Text('Compaixão'),
-              value: false,
+              value: compaixao,
               activeColor: Colors.blueGrey,
               onChanged: (bool valor) {
                 setState(() {
-                  neutral = valor;
+                  compaixao = valor;
                 });
               },
             ),
             CheckboxListTile(
               title: const Text('Surpresa'),
-              value: false,
+              value: surpresa,
               activeColor: Colors.blueGrey,
               onChanged: (bool valor) {
                 setState(() {
-                  neutral = valor;
+                  surpresa = valor;
                 });
               },
             ),
