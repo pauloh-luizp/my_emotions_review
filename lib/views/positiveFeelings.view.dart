@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_emotions_review/views/whathappened.view.dart';
 
 class PositiveFeelings extends StatefulWidget {
   PositiveFeelings({Key key}) : super(key: key);
@@ -86,6 +87,16 @@ class _PositiveFeelingsState extends State<PositiveFeelings> {
                 });
               },
             ),
+            RaisedButton(
+              child: Text('Estou me sentido assim'),
+              color: Colors.orange[800],
+              textColor: Colors.white,
+              onPressed: () {
+                Navigator.of(context).pushReplacement(
+                  MaterialPageRoute(builder: (context) => WhatHappened()),
+                );
+              },
+            )
           ],
         ),
       ),

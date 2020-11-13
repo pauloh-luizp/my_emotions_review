@@ -8,7 +8,9 @@ class WhatHappened extends StatefulWidget {
 }
 
 class _WhatHappenedState extends State<WhatHappened> {
-  var _controler1 = TextEditingController();
+  var _whatHappened = TextEditingController();
+  var _thoughtOfDoing = TextEditingController();
+  var _whatDid = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -19,9 +21,35 @@ class _WhatHappenedState extends State<WhatHappened> {
         backgroundColor: Colors.orange[800],
       ),
       body: Scrollbar(
-          child: Column(
-        children: [TextFormField()],
-      )),
+        child: Column(
+          children: [
+            TextFormField(
+              controller: _whatHappened,
+              keyboardType: TextInputType.text,
+              decoration: InputDecoration(
+                labelText: "O que aconteceu?",
+                labelStyle: TextStyle(color: Colors.orange[800]),
+              ),
+            ),
+            TextFormField(
+              controller: _thoughtOfDoing,
+              keyboardType: TextInputType.text,
+              decoration: InputDecoration(
+                labelText: "O que aconteceu?",
+                labelStyle: TextStyle(color: Colors.orange[800]),
+              ),
+            ),
+            TextFormField(
+              controller: _whatDid,
+              keyboardType: TextInputType.text,
+              decoration: InputDecoration(
+                labelText: "O que aconteceu?",
+                labelStyle: TextStyle(color: Colors.orange[800]),
+              ),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
