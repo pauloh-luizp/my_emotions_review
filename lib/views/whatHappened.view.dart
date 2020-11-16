@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_emotions_review/views/summaryFeelings.view.dart';
 
 class WhatHappened extends StatefulWidget {
   WhatHappened({Key key}) : super(key: key);
@@ -62,6 +63,16 @@ class _WhatHappenedState extends State<WhatHappened> {
               ),
               maxLines: 4,
             ),
+            RaisedButton(
+              child: Text('Registrar', style: TextStyle(fontSize: 24)),
+              color: Colors.orange[800],
+              textColor: Colors.white,
+              onPressed: () {
+                Navigator.of(context).pushReplacement(
+                  MaterialPageRoute(builder: (context) => SummaryFeelings()),
+                );
+              },
+            )
           ],
         ),
       ),
