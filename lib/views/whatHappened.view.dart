@@ -21,7 +21,7 @@ class _WhatHappenedState extends State<WhatHappened> {
         centerTitle: true,
         backgroundColor: Colors.orange[800],
       ),
-      body: Scrollbar(
+      body: SingleChildScrollView(
         child: Column(
           children: [
             SizedBox(
