@@ -3,7 +3,7 @@ class Emotions {
   int date;
   String feelings;
   List<String> yourfeelings;
-  String whathappen;
+  String whathappend;
   String doingit;
   String youdid;
 
@@ -12,7 +12,7 @@ class Emotions {
       this.date,
       this.feelings,
       this.yourfeelings,
-      this.whathappen,
+      this.whathappend,
       this.doingit,
       this.youdid});
 
@@ -21,7 +21,7 @@ class Emotions {
     date = json['date'];
     feelings = json['feelings'];
     yourfeelings = json['yourfeelings'].cast<String>();
-    whathappen = json['whathappen'];
+    whathappend = json['whathappend'];
     doingit = json['doingit'];
     youdid = json['youdid'];
   }
@@ -32,7 +32,7 @@ class Emotions {
     data['date'] = this.date;
     data['feelings'] = this.feelings;
     data['yourfeelings'] = this.yourfeelings;
-    data['whathappen'] = this.whathappen;
+    data['whathappend'] = this.whathappend;
     data['doingit'] = this.doingit;
     data['youdid'] = this.youdid;
     return data;
