@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:my_emotions_review/models/emotions.model.dart';
 import 'package:my_emotions_review/views/summaryFeelings.view.dart';
 
 class WhatHappened extends StatefulWidget {
-  WhatHappened({Key key}) : super(key: key);
+  final List yourfeelings;
+  final String currentFeeling;
+
+  WhatHappened(this.yourfeelings, this.currentFeeling);
 
   @override
   _WhatHappenedState createState() => _WhatHappenedState();
@@ -12,6 +16,7 @@ class _WhatHappenedState extends State<WhatHappened> {
   var _whatHappened = TextEditingController();
   var _thoughtOfDoing = TextEditingController();
   var _whatDid = TextEditingController();
+  List<Emotions> _list = new List<Emotions>();
 
   @override
   Widget build(BuildContext context) {
@@ -62,6 +67,9 @@ class _WhatHappenedState extends State<WhatHappened> {
                 labelStyle: TextStyle(color: Colors.orange[800], fontSize: 24),
               ),
               maxLines: 4,
+            ),
+            SizedBox(
+              height: 20,
             ),
             RaisedButton(
               child: Text('Registrar', style: TextStyle(fontSize: 24)),

@@ -38,8 +38,8 @@ class EmotionsController {
     await getAll();
   }
 
-  Future<void> updateList(List<Emotions> lista) async {
-    await repository.saveData(lista);
+  Future<void> updateList(List<Emotions> list) async {
+    await repository.saveData(list);
     await getAll();
   }
 }

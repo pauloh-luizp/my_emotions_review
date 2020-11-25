@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:my_emotions_review/views/whathappened.view.dart';
 
 class NegativeFeelings extends StatefulWidget {
-  NegativeFeelings({Key key}) : super(key: key);
+  final String currentFeeling;
+
+  NegativeFeelings(this.currentFeeling);
 
   @override
   _NegativeFeelingsState createState() => _NegativeFeelingsState();
@@ -17,6 +19,18 @@ class _NegativeFeelingsState extends State<NegativeFeelings> {
   bool desespero = false;
   bool culpa = false;
   bool ciumes = false;
+  var yourfeelings = List();
+
+  validation() {
+    if (tristeza) yourfeelings.add("tristeza");
+    if (medo) yourfeelings.add("medo");
+    if (hostilidade) yourfeelings.add("hostilidade");
+    if (frustacao) yourfeelings.add("frustação");
+    if (raiva) yourfeelings.add("raiva");
+    if (desespero) yourfeelings.add("desespero");
+    if (culpa) yourfeelings.add("culpa");
+    if (ciumes) yourfeelings.add("ciúmes");
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -110,12 +124,15 @@ class _NegativeFeelingsState extends State<NegativeFeelings> {
                 },
               ),
               RaisedButton(
-                child: Text('Estou me sentido assim', style: TextStyle(fontSize: 24)),
+                child: Text('Estou me sentido assim',
+                    style: TextStyle(fontSize: 24)),
                 color: Colors.orange[800],
                 textColor: Colors.white,
                 onPressed: () {
                   Navigator.of(context).pushReplacement(
-                    MaterialPageRoute(builder: (context) => WhatHappened()),
+                    MaterialPageRoute(
+                        builder: (context) =>
+                            WhatHappened(yourfeelings, widget.currentFeeling)),
                   );
                 },
               )

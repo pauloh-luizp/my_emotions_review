@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import 'feelings.view.dart';
+import 'package:my_emotions_review/views/summaryFeelings.view.dart';
 
 class HomeView extends StatelessWidget {
   @override
@@ -27,7 +26,7 @@ class HomeView extends StatelessWidget {
               textColor: Colors.white,
               onPressed: () {
                 Navigator.of(context).pushReplacement(
-                  MaterialPageRoute(builder: (context) => Feelings()),
+                  MaterialPageRoute(builder: (context) => SummaryFeelings()),
                 );
               },
             )

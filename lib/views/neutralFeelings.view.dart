@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:my_emotions_review/views/whathappened.view.dart';
 
 class NeutralFeelings extends StatefulWidget {
-  NeutralFeelings({Key key}) : super(key: key);
+  final String currentFeeling;
+
+  NeutralFeelings(this.currentFeeling);
 
   @override
   _NeutralFeelingsState createState() => _NeutralFeelingsState();
@@ -11,6 +13,12 @@ class NeutralFeelings extends StatefulWidget {
 class _NeutralFeelingsState extends State<NeutralFeelings> {
   bool compaixao = false;
   bool surpresa = false;
+  var yourfeelings = List();
+
+  validation() {
+    if (compaixao) yourfeelings.add("compaixão");
+    if (surpresa) yourfeelings.add("surpresa");
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -44,12 +52,15 @@ class _NeutralFeelingsState extends State<NeutralFeelings> {
               },
             ),
             RaisedButton(
-              child: Text('Estou me sentido assim', style: TextStyle(fontSize: 24)),
+              child: Text('Estou me sentido assim',
+                  style: TextStyle(fontSize: 24)),
               color: Colors.orange[800],
               textColor: Colors.white,
               onPressed: () {
                 Navigator.of(context).pushReplacement(
-                  MaterialPageRoute(builder: (context) => WhatHappened()),
+                  MaterialPageRoute(
+                      builder: (context) =>
+                          WhatHappened(yourfeelings, widget.currentFeeling)),
                 );
               },
             )

@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:my_emotions_review/views/whathappened.view.dart';
 
 class PositiveFeelings extends StatefulWidget {
-  PositiveFeelings({Key key}) : super(key: key);
+  final String currentFeeling;
+
+  PositiveFeelings(this.currentFeeling);
 
   @override
   _PositiveFeelingsState createState() => _PositiveFeelingsState();
@@ -15,6 +17,16 @@ class _PositiveFeelingsState extends State<PositiveFeelings> {
   bool amor = false;
   bool gratidao = false;
   bool esperanca = false;
+  var yourfeelings = List();
+
+  validation() {
+    if (felicidade) yourfeelings.add("felicidade");
+    if (humor) yourfeelings.add("humor");
+    if (alegria) yourfeelings.add("alegria");
+    if (amor) yourfeelings.add("amor");
+    if (gratidao) yourfeelings.add("gratidão");
+    if (esperanca) yourfeelings.add("esperança");
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -88,12 +100,15 @@ class _PositiveFeelingsState extends State<PositiveFeelings> {
               },
             ),
             RaisedButton(
-              child: Text('Estou me sentido assim', style: TextStyle(fontSize: 24)),
+              child: Text('Estou me sentido assim',
+                  style: TextStyle(fontSize: 24)),
               color: Colors.orange[800],
               textColor: Colors.white,
               onPressed: () {
                 Navigator.of(context).pushReplacement(
-                  MaterialPageRoute(builder: (context) => WhatHappened()),
+                  MaterialPageRoute(
+                      builder: (context) =>
+                          WhatHappened(yourfeelings, widget.currentFeeling)),
                 );
               },
             )

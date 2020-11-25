@@ -32,7 +32,8 @@ class _FeelingsState extends State<Feelings> {
               groupValue: currentFeeling,
               onChanged: (String valor) {
                 Navigator.of(context).push(
-                  MaterialPageRoute(builder: (context) => PositiveFeelings()),
+                  MaterialPageRoute(
+                      builder: (context) => PositiveFeelings(currentFeeling)),
                 );
                 setState(() {
                   currentFeeling = valor;
@@ -47,7 +48,8 @@ class _FeelingsState extends State<Feelings> {
               groupValue: currentFeeling,
               onChanged: (String valor) {
                 Navigator.of(context).push(
-                  MaterialPageRoute(builder: (context) => PositiveFeelings()),
+                  MaterialPageRoute(
+                      builder: (context) => PositiveFeelings(currentFeeling)),
                 );
                 setState(() {
                   currentFeeling = valor;
@@ -62,7 +64,8 @@ class _FeelingsState extends State<Feelings> {
               groupValue: currentFeeling,
               onChanged: (String valor) {
                 Navigator.of(context).push(
-                  MaterialPageRoute(builder: (context) => NeutralFeelings()),
+                  MaterialPageRoute(
+                      builder: (context) => NeutralFeelings(currentFeeling)),
                 );
                 setState(() {
                   currentFeeling = valor;
@@ -77,7 +80,8 @@ class _FeelingsState extends State<Feelings> {
               groupValue: currentFeeling,
               onChanged: (String valor) {
                 Navigator.of(context).push(
-                  MaterialPageRoute(builder: (context) => NegativeFeelings()),
+                  MaterialPageRoute(
+                      builder: (context) => NegativeFeelings(currentFeeling)),
                 );
                 setState(() {
                   currentFeeling = valor;
@@ -92,7 +96,8 @@ class _FeelingsState extends State<Feelings> {
               groupValue: currentFeeling,
               onChanged: (String valor) {
                 Navigator.of(context).push(
-                  MaterialPageRoute(builder: (context) => NegativeFeelings()),
+                  MaterialPageRoute(
+                      builder: (context) => NegativeFeelings(currentFeeling)),
                 );
                 setState(() {
                   currentFeeling = valor;
