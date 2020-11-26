@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 import 'package:my_emotions_review/models/emotions.model.dart';
 import 'package:my_emotions_review/views/summaryFeelings.view.dart';
 import 'package:my_emotions_review/controllers/emotions.controller.dart';
@@ -17,6 +18,7 @@ class _WhatHappenedState extends State<WhatHappened> {
   var _whatHappened = TextEditingController();
   var _thoughtOfDoing = TextEditingController();
   var _whatDid = TextEditingController();
+  DateFormat dateFormat = DateFormat("dd-MM-yyyy HH:mm:ss");
   EmotionsController _emotionsController = EmotionsController();
 
   @override
@@ -80,7 +82,7 @@ class _WhatHappenedState extends State<WhatHappened> {
                 _emotionsController.getAll().then((value) {
                   _emotionsController.create(Emotions(
                       id: 0,
-                      date: DateTime.now().toString(),
+                      date: dateFormat.format(DateTime.now()),
                       feelings: widget.currentFeeling,
                       yourfeelings: widget.yourfeelings,
                       whathappened: _whatHappened.text,

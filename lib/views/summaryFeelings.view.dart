@@ -47,13 +47,6 @@ class _SummaryFeelingsState extends State<SummaryFeelings> {
                           title: Center(
                               child: Text(_emotionsController.list[i].date)),
                         ),
-                        Divider(),
-                        /*for (int j = 0;
-                            j < _emotionsController.list[i].yourfeelings.length;
-                            j++)
-                          Text(_emotionsController.list[i].yourfeelings[j]),*/
-                        Text(_emotionsController.list[i].yourfeelings
-                            .toString()),
                         IconButton(
                           icon: Icon(
                             Icons.delete,
@@ -66,6 +59,13 @@ class _SummaryFeelingsState extends State<SummaryFeelings> {
                             });
                           },
                         ),
+                        Divider(),
+                        /*for (int j = 0;
+                            j < _emotionsController.list[i].yourfeelings.length;
+                            j++)
+                          Text(_emotionsController.list[i].yourfeelings[j]),*/
+                        Text(_emotionsController.list[i].yourfeelings
+                            .toString()),
                       ],
                     )),
                   )
