@@ -13,7 +13,7 @@ class HomeView extends StatelessWidget {
         child: Column(
           children: [
             Image.asset(
-              'assets/images/Clotilde.jpg',
+              'assets/images/Clotilde.png',
               width: 350,
               height: 350,
             ),

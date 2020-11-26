@@ -30,8 +30,17 @@ class _WhatHappenedState extends State<WhatHappened> {
         backgroundColor: Colors.orange[800],
       ),
       body: SingleChildScrollView(
+        padding: EdgeInsets.only(left: 10, right: 10),
         child: Column(
           children: [
+            Text(
+              "Conta para a Clotilde o que aconteceu.",
+              style: TextStyle(
+                fontSize: 20.0,
+                color: Colors.green,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
             SizedBox(
               height: 20,
             ),

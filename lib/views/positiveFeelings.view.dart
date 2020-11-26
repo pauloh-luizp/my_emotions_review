@@ -39,6 +39,15 @@ class _PositiveFeelingsState extends State<PositiveFeelings> {
       body: Container(
         child: Column(
           children: [
+            Text(
+              "Um sentimento positivo!\nA Clotilde fica feliz!",
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                fontSize: 20.0,
+                color: Colors.green,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
             CheckboxListTile(
               title: const Text('Felicidade'),
               value: felicidade,

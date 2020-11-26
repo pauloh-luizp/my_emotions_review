@@ -24,6 +24,15 @@ class _FeelingsState extends State<Feelings> {
       body: Container(
         child: Column(
           children: [
+            Text(
+              "Conte para Clotilde como se sente",
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                fontSize: 20.0,
+                color: Colors.green,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
             RadioListTile(
               title: Text("++ Feliz"),
               subtitle: Text("Fico muito feliz pois você está muito feliz!"),

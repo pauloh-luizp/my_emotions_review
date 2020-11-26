@@ -31,6 +31,15 @@ class _NeutralFeelingsState extends State<NeutralFeelings> {
       body: Container(
         child: Column(
           children: [
+            Text(
+              "Um sentimento neutro\nSaiba que a Clotilde está aqui para te ajudar",
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                fontSize: 20.0,
+                color: Colors.green,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
             CheckboxListTile(
               title: const Text('Compaixão'),
               value: compaixao,

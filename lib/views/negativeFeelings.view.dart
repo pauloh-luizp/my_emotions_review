@@ -43,6 +43,15 @@ class _NegativeFeelingsState extends State<NegativeFeelings> {
         body: Container(
           child: Column(
             children: [
+              Text(
+                "Sentimento negativo\nVamos conversar, o que você sente?",
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  fontSize: 20.0,
+                  color: Colors.green,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
               CheckboxListTile(
                 title: const Text('Tristeza'),
                 value: tristeza,

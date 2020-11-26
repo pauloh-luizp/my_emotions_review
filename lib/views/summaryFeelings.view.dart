@@ -38,34 +38,68 @@ class _SummaryFeelingsState extends State<SummaryFeelings> {
           child: Container(
             child: Column(
               children: [
-                for (int i = 0; i < _emotionsController.list.length; i++)
+                for (int i = _emotionsController.list.length - 1; i > 0; i--)
                   ListTile(
                     title: Card(
                         child: Column(
                       children: [
-                        ListTile(
-                          title: Center(
-                              child: Text(_emotionsController.list[i].date)),
-                        ),
-                        IconButton(
-                          icon: Icon(
-                            Icons.delete,
-                            size: 20.0,
-                            color: Colors.red[900],
-                          ),
-                          onPressed: () {
-                            _emotionsController.delete(i).then((data) {
-                              setState(() {});
-                            });
-                          },
-                        ),
+                        Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              Text(
+                                _emotionsController.list[i].date,
+                                style: TextStyle(
+                                  fontSize: 16.0,
+                                  color: Colors.green,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                              IconButton(
+                                icon: Icon(
+                                  Icons.delete,
+                                  size: 20.0,
+                                  color: Colors.red[900],
+                                ),
+                                onPressed: () {
+                                  _emotionsController.delete(i).then((data) {
+                                    setState(() {});
+                                  });
+                                },
+                              ),
+                            ]),
                         Divider(),
-                        /*for (int j = 0;
-                            j < _emotionsController.list[i].yourfeelings.length;
-                            j++)
-                          Text(_emotionsController.list[i].yourfeelings[j]),*/
+                        Text(
+                          _emotionsController.list[i].feelings,
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                              fontSize: 16.0, fontWeight: FontWeight.bold),
+                        ),
                         Text(_emotionsController.list[i].yourfeelings
                             .toString()),
+                        Text(
+                          "O que aconteceu:",
+                          textAlign: TextAlign.start,
+                          style: TextStyle(
+                            fontSize: 16.0,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        Text(_emotionsController.list[i].whathappened),
+                        Text(
+                          "O que você pensou em fazer:",
+                          textAlign: TextAlign.start,
+                          style: TextStyle(
+                              fontSize: 16.0, fontWeight: FontWeight.bold),
+                        ),
+                        Text(_emotionsController.list[i].doingit),
+                        Text(
+                          "O que você fez:",
+                          textAlign: TextAlign.start,
+                          style: TextStyle(
+                              fontSize: 16.0, fontWeight: FontWeight.bold),
+                        ),
+                        Text(_emotionsController.list[i].whatdid),
                       ],
                     )),
                   )
