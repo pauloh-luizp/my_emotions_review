@@ -13,7 +13,7 @@ class NeutralFeelings extends StatefulWidget {
 class _NeutralFeelingsState extends State<NeutralFeelings> {
   bool compaixao = false;
   bool surpresa = false;
-  var yourfeelings = List();
+  var yourfeelings = List<String>();
 
   validation() {
     if (compaixao) yourfeelings.add("compaixão");
@@ -57,6 +57,7 @@ class _NeutralFeelingsState extends State<NeutralFeelings> {
               color: Colors.orange[800],
               textColor: Colors.white,
               onPressed: () {
+                validation();
                 Navigator.of(context).pushReplacement(
                   MaterialPageRoute(
                       builder: (context) =>

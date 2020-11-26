@@ -19,7 +19,7 @@ class _NegativeFeelingsState extends State<NegativeFeelings> {
   bool desespero = false;
   bool culpa = false;
   bool ciumes = false;
-  var yourfeelings = List();
+  var yourfeelings = List<String>();
 
   validation() {
     if (tristeza) yourfeelings.add("tristeza");
@@ -129,6 +129,7 @@ class _NegativeFeelingsState extends State<NegativeFeelings> {
                 color: Colors.orange[800],
                 textColor: Colors.white,
                 onPressed: () {
+                  validation();
                   Navigator.of(context).pushReplacement(
                     MaterialPageRoute(
                         builder: (context) =>

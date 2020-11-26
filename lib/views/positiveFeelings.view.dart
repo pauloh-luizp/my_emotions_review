@@ -17,7 +17,7 @@ class _PositiveFeelingsState extends State<PositiveFeelings> {
   bool amor = false;
   bool gratidao = false;
   bool esperanca = false;
-  var yourfeelings = List();
+  var yourfeelings = List<String>();
 
   validation() {
     if (felicidade) yourfeelings.add("felicidade");
@@ -105,6 +105,7 @@ class _PositiveFeelingsState extends State<PositiveFeelings> {
               color: Colors.orange[800],
               textColor: Colors.white,
               onPressed: () {
+                validation();
                 Navigator.of(context).pushReplacement(
                   MaterialPageRoute(
                       builder: (context) =>

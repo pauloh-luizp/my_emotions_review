@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:my_emotions_review/models/emotions.model.dart';
 import 'package:my_emotions_review/views/summaryFeelings.view.dart';
+import 'package:my_emotions_review/controllers/emotions.controller.dart';
 
 class WhatHappened extends StatefulWidget {
   final List yourfeelings;
@@ -16,7 +17,7 @@ class _WhatHappenedState extends State<WhatHappened> {
   var _whatHappened = TextEditingController();
   var _thoughtOfDoing = TextEditingController();
   var _whatDid = TextEditingController();
-  List<Emotions> _list = new List<Emotions>();
+  EmotionsController _emotionsController = EmotionsController();
 
   @override
   Widget build(BuildContext context) {
@@ -76,9 +77,19 @@ class _WhatHappenedState extends State<WhatHappened> {
               color: Colors.orange[800],
               textColor: Colors.white,
               onPressed: () {
-                Navigator.of(context).pushReplacement(
-                  MaterialPageRoute(builder: (context) => SummaryFeelings()),
-                );
+                _emotionsController.getAll().then((value) {
+                  _emotionsController.create(Emotions(
+                      id: 0,
+                      date: DateTime.now().toString(),
+                      feelings: widget.currentFeeling,
+                      yourfeelings: widget.yourfeelings,
+                      whathappened: _whatHappened.text,
+                      doingit: _thoughtOfDoing.text,
+                      whatdid: _whatDid.text));
+                  Navigator.of(context).pushReplacement(
+                    MaterialPageRoute(builder: (context) => SummaryFeelings()),
+                  );
+                });
               },
             )
           ],

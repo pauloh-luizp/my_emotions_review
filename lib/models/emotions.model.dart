@@ -1,29 +1,29 @@
 class Emotions {
   int id;
-  int date;
+  String date;
   String feelings;
   List<String> yourfeelings;
-  String whathappend;
+  String whathappened;
   String doingit;
-  String youdid;
+  String whatdid;
 
   Emotions(
       {this.id,
       this.date,
       this.feelings,
       this.yourfeelings,
-      this.whathappend,
+      this.whathappened,
       this.doingit,
-      this.youdid});
+      this.whatdid});
 
   Emotions.fromJson(Map<String, dynamic> json) {
     id = json['id'];
     date = json['date'];
     feelings = json['feelings'];
     yourfeelings = json['yourfeelings'].cast<String>();
-    whathappend = json['whathappend'];
+    whathappened = json['whathappened'];
     doingit = json['doingit'];
-    youdid = json['youdid'];
+    whatdid = json['whatdid'];
   }
 
   Map<String, dynamic> toJson() {
@@ -32,9 +32,9 @@ class Emotions {
     data['date'] = this.date;
     data['feelings'] = this.feelings;
     data['yourfeelings'] = this.yourfeelings;
-    data['whathappend'] = this.whathappend;
+    data['whathappened'] = this.whathappened;
     data['doingit'] = this.doingit;
-    data['youdid'] = this.youdid;
+    data['whatdid'] = this.whatdid;
     return data;
   }
 }
