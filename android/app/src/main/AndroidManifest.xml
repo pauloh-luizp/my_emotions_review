@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.my_emotions_review">
    <application
-        android:label="Emotions review"
+        android:label="Psic Clotilde"
         android:icon="@mipmap/emotionsreview">
         <activity
             android:name=".MainActivity"
