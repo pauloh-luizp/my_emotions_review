@@ -1,8 +1,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.my_emotions_review">
    <application
-        android:label="my_emotions_review"
-        android:icon="@mipmap/ic_launcher">
+        android:label="Emotions review"
+        android:icon="@mipmap/emotionsreview">
         <activity
             android:name=".MainActivity"
             android:launchMode="singleTop"
